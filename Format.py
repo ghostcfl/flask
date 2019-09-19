@@ -89,3 +89,50 @@ def concat(dictionary, string):
         list_key_value.append(k + "=" + '\'' + v + '\'')
     conditions = string.join(list_key_value)
     return conditions
+
+
+
+"""
+import random, time
+
+one = [{"LPL": "FPX"}, {"LCK": "SKT"}, {"LCS": "TL"}, {"LEC": "G2"}]
+
+two = [{"LPL": "RNG"}, {"LPL": "IG"}, {"LCK": "GRF"}, {"LCS": "C9"},
+       {"LEC": "FNC"}, {"LMS": "JT"}, {"VCS": "GAM"}, {"LMS": "AHQ"}]
+
+three = [{"LCK": "DWG"}, {"LMS": "HKA"}, {"LCS": "CG"}, {"LEC": "SPY"}]
+
+groupA = {}
+groupB = {}
+groupC = {}
+groupD = {}
+
+i = 0
+while True:
+    # 一号种子抽签
+    x = random.randint(0, len(one) - 1)
+    if i == 0:
+        for k, v in one[x].items():
+            groupA[k] = v
+        one.remove(one[x])
+    elif i == 1:
+        for k, v in one[x].items():
+            groupB[k] = v
+        one.remove(one[x])
+    elif i == 2:
+        for k, v in one[x].items():
+            groupC[k] = v
+        one.remove(one[x])
+    elif i == 3:
+        for k, v in one[x].items():
+            groupD[k] = v
+        one.remove(one[x])
+        break
+    i += 1
+
+print(groupA)
+print(groupB)
+print(groupC)
+print(groupD)
+
+"""
